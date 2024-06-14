@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <input type="number" id="num1" />
+    <input type="number" id="num2" />
+    <div id="Calculadora"></div>
+
+    <input type="button" value="Soma" onclick="soma()"/>
+ <br>
+     
+   
+    <div id="Calcular"></div>
+
+    <input type="button" value="Subtrair" onclick="subtrair()"/>
+<br>
+
+   
+    <div id="Calculo"></div>
+
+    <input type="button" value="Dividir" onclick="dividir()"/>
+   <br>
+
+  
+   <div id="Valor"></div>
+
+   <input type="button" value="Multiplicar" onclick="multiplicar()"/>
+   
+    <script>
+        function soma(){
+        var num1 = document.getElementById('num1')
+        var num2 = document.getElementById('num2')
+        var resSoma = document.getElementById('Calculadora')  
+        var numero1 = Number(num1.value)
+        var numero2 = Number(num2.value)
+        var soma = numero1 + numero2
+
+        resSoma.innerHTML = `O Resultado da soma entre ${numero1} e ${numero2} é ${soma}`
+        }
+
+        function subtrair(){
+        var menos1 = document.getElementById('num1')
+        var menos2 = document.getElementById('num2')
+        var resSubtrair = document.getElementById('Calcular')  
+        var nu1 = Number(menos1.value)
+        var nu2 = Number(menos2.value)
+        var subtrair = nu1 - nu2
+
+         resSubtrair.innerHTML = `O Resultado da subtracao entre ${nu1} e ${nu2} é ${subtrair}` 
+
+        }
+
+        function dividir(){
+        var divid1 = document.getElementById('num1')
+        var divid2 = document.getElementById('num2')
+        var resDividir = document.getElementById('Calculo')  
+        var di1 = Number(divid1.value)
+        var di2 = Number(divid2.value)
+        var dividir = di1 / di2
+
+         resDividir.innerHTML = `O Resultado da divisao entre ${di1} e ${di2} é ${dividir}` 
+
+        }
+
+        function multiplicar(){
+        var val1 = document.getElementById('num1')
+        var val2 = document.getElementById('num2')
+        var resMultiplicar = document.getElementById('Valor')  
+        var va1 = Number(val1.value)
+        var va2 = Number(val2.value)
+        var multiplicar = va1 * va2
+
+         resMultiplicar.innerHTML = `O Resultado da multiplicacao entre ${va1} e ${va2} é ${multiplicar}` 
+
+        }
+       
+    </script>
+    
+</body>
+</html>
